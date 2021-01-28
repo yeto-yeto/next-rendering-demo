@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "eslint": "eslint . --ext ts --ext tsx --ext js",
+    "stylelint": "stylelint 'src/**/*.css'",
+    "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
     "next": "10.0.5",

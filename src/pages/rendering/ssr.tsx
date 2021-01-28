@@ -4,19 +4,19 @@ import { RenderedAt } from 'src/components/RenderedAt'
 import { RenderMonster } from 'src/components/RenderMonster'
 import { RenderNav } from 'src/components/RenderNav'
 
-const Home = () => {
+const Ssr = () => {
   return (
     <>
       <Head>
-        <title>Next Rendering Demo</title>
+        <title>SSR Rendering Demo</title>
       </Head>
       <Container>
-        <RenderMonster />
-        <RenderedAt />
+        <RenderMonster render="ssr" />
+        <RenderedAt time="ssr" render="ssr" />
         <RenderNav />
       </Container>
     </>
   )
 }
 
-export default Home
+export default Ssr

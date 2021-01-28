@@ -12,11 +12,6 @@
   grid-template-rows: auto 1fr auto;
 }
 
-/* Write your own custom component styles here */
-.btn-blue {
-  @apply p-3 text-white bg-blue-700;
-}
-
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
