@@ -1,10 +1,10 @@
-import dayjs from 'dayjs'
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Container } from 'src/components/Container'
 import { RenderedAt } from 'src/components/RenderedAt'
 import { RenderMonster } from 'src/components/RenderMonster'
 import { RenderNav } from 'src/components/RenderNav'
+import { day } from 'src/lib/day'
 
 const Csr = () => {
   const [time, setTime] = useState('')
@@ -12,7 +12,7 @@ const Csr = () => {
   useEffect(() => {
     const randomTime = ~~(Math.random() * (1001 - 100)) + 100
     setTimeout(() => {
-      setTime(dayjs().format('YYYY/MM/DD HH:mm:ss'))
+      setTime(day().format('YYYY/MM/DD HH:mm:ss'))
     }, randomTime)
   }, [])
 

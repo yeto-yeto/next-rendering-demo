@@ -1,15 +1,15 @@
-import dayjs from 'dayjs'
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import Head from 'next/head'
 import { Container } from 'src/components/Container'
 import { RenderedAt } from 'src/components/RenderedAt'
 import { RenderMonster } from 'src/components/RenderMonster'
 import { RenderNav } from 'src/components/RenderNav'
+import { day } from 'src/lib/day'
 
 export const getServerSideProps: GetServerSideProps<{ date: string }> = async () => {
   return {
     props: {
-      date: dayjs().format('YYYY/MM/DD HH:mm:ss'),
+      date: day().format('YYYY/MM/DD HH:mm:ss'),
     },
   }
 }
