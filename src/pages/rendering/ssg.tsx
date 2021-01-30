@@ -1,18 +1,30 @@
+import dayjs from 'dayjs'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { Container } from 'src/components/Container'
 import { RenderedAt } from 'src/components/RenderedAt'
 import { RenderMonster } from 'src/components/RenderMonster'
 import { RenderNav } from 'src/components/RenderNav'
 
-const Ssg = () => {
+export const getStaticProps: GetStaticProps<{ date: string }> = async () => {
+  return {
+    props: {
+      date: dayjs().format('YYYY/MM/DD HH:mm:ss'),
+    },
+  }
+}
+
+type SsgProps = InferGetStaticPropsType<typeof getStaticProps>
+
+const Ssg = (props: SsgProps) => {
   return (
     <>
       <Head>
         <title>SSG Rendering Demo</title>
       </Head>
       <Container>
-        <RenderMonster render="ssg" />
-        <RenderedAt time="ssg" render="ssg" />
+        <RenderMonster color="#F0B775" />
+        <RenderedAt time={props.date} render="ssg" />
         <RenderNav />
       </Container>
     </>

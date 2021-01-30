@@ -12,6 +12,10 @@
   grid-template-rows: auto 1fr auto;
 }
 
+._render-monstor {
+  zoom: 0.5;
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */

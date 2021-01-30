@@ -15,19 +15,18 @@ const Please = () => {
 }
 
 export const RenderedAt = (props: RenderedAtProps) => {
-  if (!props.time) {
-    return <Please />
-  }
-
   if (!props.render) {
     return <Please />
   }
 
   return (
-    <div className="flex flex-col h-24">
+    <div className="flex flex-col h-24 w-80">
       <h2 className="text-2xl font-black">{RenderingName[props.render].abbr}</h2>
       <p className="text-xl">{RenderingName[props.render].name}</p>
-      <p className="text-md">Rendered at: {props.time}</p>
+      <p className="text-md">
+        Rendered at:&nbsp;
+        <span className="text-xl font-black">{props.time}</span>
+      </p>
     </div>
   )
 }

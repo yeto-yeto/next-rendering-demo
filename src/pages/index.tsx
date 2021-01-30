@@ -11,7 +11,7 @@ const Home = () => {
         <title>Next Rendering Demo</title>
       </Head>
       <Container>
-        <RenderMonster />
+        <RenderMonster color="#ffffff" />
         <RenderedAt />
         <RenderNav />
       </Container>

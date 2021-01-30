@@ -5,7 +5,7 @@ import { Layout } from 'src/layouts/layout'
 
 const App = (props: AppProps) => {
   return (
-    <Layout>
+    <Layout {...props.pageProps}>
       <props.Component {...props.pageProps} />
     </Layout>
   )
