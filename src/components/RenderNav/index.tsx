@@ -2,10 +2,10 @@ import type { LinkButtonProps } from 'src/components/RenderNav/LinkButton'
 import { LinkButton } from 'src/components/RenderNav/LinkButton'
 
 const renderLinks: LinkButtonProps[] = [
-  { text: 'csr', href: '/rendering/csr' },
-  { text: 'ssr', href: '/rendering/ssr' },
-  { text: 'ssg', href: '/rendering/ssg' },
-  { text: 'isr', href: '/rendering/isr' },
+  { text: 'csr', href: '/rendering/csr', bgColor: '#2E94B9' },
+  { text: 'ssr', href: '/rendering/ssr', bgColor: '#FFFDC0' },
+  { text: 'ssg', href: '/rendering/ssg', bgColor: '#F0B775' },
+  { text: 'isr', href: '/rendering/isr', bgColor: '#D25565' },
 ]
 
 export const RenderNav = () => {

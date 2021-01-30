@@ -10,8 +10,8 @@ export const getStaticProps: GetStaticProps<{ date: string }> = async () => {
   return {
     props: {
       date: dayjs().format('YYYY/MM/DD HH:mm:ss'),
-      revalidate: 1,
     },
+    revalidate: 1,
   }
 }
 
