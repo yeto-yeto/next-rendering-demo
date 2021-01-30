@@ -12,7 +12,7 @@ const Csr = () => {
   useEffect(() => {
     const randomTime = ~~(Math.random() * (1001 - 100)) + 100
     setTimeout(() => {
-      setTime(day().format('YYYY/MM/DD HH:mm:ss'))
+      setTime(day().tz('Asia/Tokyo').format('YYYY/MM/DD HH:mm:ss'))
     }, randomTime)
   }, [])
 

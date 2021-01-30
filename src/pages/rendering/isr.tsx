@@ -9,7 +9,7 @@ import { day } from 'src/lib/day'
 export const getStaticProps: GetStaticProps<{ date: string }> = async () => {
   return {
     props: {
-      date: day().format('YYYY/MM/DD HH:mm:ss'),
+      date: day().tz('Asia/Tokyo').format('YYYY/MM/DD HH:mm:ss'),
     },
     revalidate: 1,
   }
