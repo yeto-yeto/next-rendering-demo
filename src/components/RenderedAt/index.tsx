@@ -11,7 +11,7 @@ const RenderingName = {
 }
 
 const Please = () => {
-  return <p className="h-24 text-2xl font-black">Press the button</p>
+  return <p className="h-28 text-2xl font-black">Press the button</p>
 }
 
 export const RenderedAt = (props: RenderedAtProps) => {
@@ -20,12 +20,16 @@ export const RenderedAt = (props: RenderedAtProps) => {
   }
 
   return (
-    <div className="flex flex-col h-24 w-80">
+    <div className="flex flex-col w-full h-28 sm:w-80">
       <h2 className="text-2xl font-black">{RenderingName[props.render].abbr}</h2>
       <p className="text-xl">{RenderingName[props.render].name}</p>
-      <p className="text-md">
+      <p className="flex flex-col items-baseline text-md sm:flex-row">
         Rendered at:&nbsp;
-        <span className="text-xl font-black">{props.time}</span>
+        {props.time ? (
+          <span className="text-xl font-black">{props.time}</span>
+        ) : (
+          <span className="text-xl">...</span>
+        )}
       </p>
     </div>
   )

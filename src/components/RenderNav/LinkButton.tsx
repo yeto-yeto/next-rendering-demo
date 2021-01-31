@@ -12,7 +12,7 @@ export const LinkButton = (props: LinkButtonProps) => {
       <a
         className={`flex justify-center items-center h-10 rounded-md ${props.bgColor} hover:opacity-90`}
       >
-        <span className="text-xl font-semibold">{props.text.toUpperCase()}</span>
+        <span className="text-xl font-semibold">{props.text}</span>
       </a>
     </Link>
   )

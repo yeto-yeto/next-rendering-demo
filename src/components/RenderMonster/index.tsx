@@ -1,17 +1,8 @@
-// import Image from 'next/image'
-
-// type RenderMonsterProps = {
-//   render?: 'csr' | 'ssr' | 'ssg' | 'isr'
-// }
 type RenderMonsterProps = {
   color: string
 }
 
-// export const RenderMonster = (props: RenderMonsterProps) => {
 export const RenderMonster = (props: RenderMonsterProps) => {
-  // const src = `/svg/monster_${props.render ?? 'home'}.svg`
-
-  // return <Image src={src} alt="render monster" width={300} height={300} className="bg-blue-400" />
   return (
     <div className="_render-monstor">
       <svg
