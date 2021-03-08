@@ -2,7 +2,9 @@ import type { DocumentContext, DocumentInitialProps } from 'next/document'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
     return initialProps
   }
@@ -10,12 +12,40 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <meta name="description" content="Next.jsのレンダリングのデモ。勉強用" />
-          <meta property="og:type" content=" website" />
-          <meta property="og:title" content="Next Rendering Demo" />
-          <meta property="og:description" content="Next.jsのレンダリングのデモ。勉強用" />
-          <meta property="og:site_name" content="Next Rendering Demo" />
-          <meta property="og:image" content="/svg/monster_home.svg" />
+          {/* windows */}
+          <meta
+            name="msapplication-square70x70logo"
+            content="/site-tile-70x70.png"
+          />
+          <meta
+            name="msapplication-square150x150logo"
+            content="/site-tile-150x150.png"
+          />
+          <meta
+            name="msapplication-wide310x150logo"
+            content="/site-tile-310x150.png"
+          />
+          <meta
+            name="msapplication-square310x310logo"
+            content="/site-tile-310x310.png"
+          />
+          <meta name="msapplication-TileColor" content="#000" />
+          {/* safari */}
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+          <meta name="apple-mobile-web-app-title" content="myapp" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon-180x180.png"
+          />
+          {/* 一般 */}
+          <meta name="application-name" content="Next Rendering Demo" />
+          <meta name="theme-color" content="#000" />
+          <meta name="description" content="Next.jsのレンダリングのデモ" />
+          <link rel="icon" sizes="192x192" href="/icon-192x192.png" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />

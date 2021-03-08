@@ -21,7 +21,9 @@ export const RenderedAt = (props: RenderedAtProps) => {
 
   return (
     <div className="flex flex-col w-full h-28 sm:w-80">
-      <h2 className="text-2xl font-black">{RenderingName[props.render].abbr}</h2>
+      <h2 className="text-2xl font-black">
+        {RenderingName[props.render].abbr}
+      </h2>
       <p className="text-xl">{RenderingName[props.render].name}</p>
       <p className="flex flex-col items-baseline text-md sm:flex-row">
         Rendered at:&nbsp;

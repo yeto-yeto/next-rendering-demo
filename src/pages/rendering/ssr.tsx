@@ -6,7 +6,9 @@ import { RenderMonster } from 'src/components/RenderMonster'
 import { RenderNav } from 'src/components/RenderNav'
 import { day } from 'src/lib/day'
 
-export const getServerSideProps: GetServerSideProps<{ date: string }> = async () => {
+export const getServerSideProps: GetServerSideProps<{
+  date: string
+}> = async () => {
   return {
     props: {
       date: day().tz('Asia/Tokyo').format('YYYY/MM/DD HH:mm:ss'),
